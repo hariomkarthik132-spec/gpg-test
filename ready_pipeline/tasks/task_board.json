@@ -1,0 +1,108 @@
+{
+  "goal": "Suno mujhe powerful website task automation, prompts, code aur online workflow pipeline chaiye",
+  "language": "Hindi + English",
+  "status_values": [
+    "todo",
+    "running",
+    "blocked",
+    "needs_human_approval",
+    "done"
+  ],
+  "tasks": [
+    {
+      "id": "step-1",
+      "title": "Intake Brain / Requirement Collector",
+      "purpose": "Samjho user ka goal, required inputs, target websites, login needs, aur success criteria.",
+      "tools": [
+        "structured prompt",
+        "JSON task schema",
+        "human confirmation"
+      ],
+      "checkpoint": "User confirms exact task, permissions, and risk level.",
+      "status": "todo",
+      "human_approval_required": true
+    },
+    {
+      "id": "step-2",
+      "title": "Planner Brain",
+      "purpose": "Goal ko small tasks, dependencies, deadlines, aur fallback paths me todna.",
+      "tools": [
+        "LLM prompt",
+        "task graph",
+        "priority scoring"
+      ],
+      "checkpoint": "Plan has clear steps, owner, and expected output.",
+      "status": "todo",
+      "human_approval_required": false
+    },
+    {
+      "id": "step-3",
+      "title": "Tool Router",
+      "purpose": "Har step ke liye best tool choose karna: code, browser, API, files, email, ya manual approval.",
+      "tools": [
+        "Python",
+        "Playwright/Selenium when permitted",
+        "REST APIs",
+        "Playwright",
+        "DeepSeek API",
+        "JetBrains IDE"
+      ],
+      "checkpoint": "Only approved tools run; secrets are loaded from environment variables.",
+      "status": "todo",
+      "human_approval_required": true
+    },
+    {
+      "id": "step-4",
+      "title": "Executor Chain",
+      "purpose": "Local scripts, website actions, API calls, and document generation ko sequence me run karna.",
+      "tools": [
+        "job queue",
+        "retry policy",
+        "logs",
+        "dry-run mode"
+      ],
+      "checkpoint": "Each action logs result and stops on unsafe/high-cost operations.",
+      "status": "todo",
+      "human_approval_required": true
+    },
+    {
+      "id": "step-5",
+      "title": "Verifier Brain",
+      "purpose": "Output validate karna: screenshots, API response, tests, content quality, aur data accuracy.",
+      "tools": [
+        "unit tests",
+        "HTML report",
+        "manual review"
+      ],
+      "checkpoint": "Task complete only after automated checks plus human review for sensitive actions.",
+      "status": "todo",
+      "human_approval_required": true
+    },
+    {
+      "id": "step-6",
+      "title": "Learning Loop",
+      "purpose": "Successful runs se reusable templates, prompts, aur tool recipes banana.",
+      "tools": [
+        "run history",
+        "prompt library",
+        "idea backlog"
+      ],
+      "checkpoint": "Save only non-sensitive lessons and redact private data.",
+      "status": "todo",
+      "human_approval_required": false
+    }
+  ],
+  "secrets": {
+    "storage": "Use environment variables or a secret manager only.",
+    "example_env_names": [
+      "OPENAI_API_KEY",
+      "DEEPSEEK_API_KEY",
+      "BROWSER_PROFILE_PATH"
+    ]
+  },
+  "blocked_actions": [
+    "bypass CAPTCHA/login/paywall/security controls",
+    "spam or mass-message people without consent",
+    "purchase/publish/delete/install without human confirmation"
+  ]
+}
