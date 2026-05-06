@@ -1,0 +1,3 @@
+Suggest practical automation ideas for: Suno mujhe powerful website task automation, prompts, code aur online workflow pipeline chaiye
+Return ideas that are legal, ethical, and useful for a small team or solo user.
+Include expected benefit, difficulty, and first implementation step.

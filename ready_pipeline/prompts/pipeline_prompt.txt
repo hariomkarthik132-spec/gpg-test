@@ -1,0 +1,10 @@
+Goal: Suno mujhe powerful website task automation, prompts, code aur online workflow pipeline chaiye
+Language mode: Hindi + English
+
+Create a step-by-step automation chain with:
+1. Inputs needed from the user.
+2. Tools/APIs that should be connected.
+3. Safe browser/site actions that require user-owned accounts.
+4. Code modules to build first.
+5. Tests and checkpoints.
+6. New ideas to improve the workflow.
