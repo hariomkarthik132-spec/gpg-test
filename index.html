@@ -19,6 +19,99 @@
       <button type="button" id="reloadBtn">Reload</button>
     </form>
 
+    <section class="pipeline">
+      <h2>Bug bounty + AI pipeline</h2>
+      <p class="hint">Select a bug bounty platform or AI tool, and load it instantly into your workflow runner.</p>
+      <p class="hint">Added tools: Burp/Caido/PwnFox/Wireshark + recon, fuzzing, AI and automation stacks.</p>
+      <div class="pipeline-controls">
+        <select id="presetSelect" aria-label="Pipeline preset">
+          <option value="">Choose a preset…</option>
+          <optgroup label="Bug bounty platforms">
+            <option value="https://hackerone.com/bug-bounty-programs">HackerOne programs</option>
+            <option value="https://bugcrowd.com/programs">Bugcrowd programs</option>
+            <option value="https://intigriti.com/programs">Intigriti programs</option>
+            <option value="https://yeswehack.com/programs">YesWeHack programs</option>
+          </optgroup>
+          <optgroup label="Security recon tools">
+            <option value="https://www.shodan.io">Shodan</option>
+            <option value="https://search.censys.io">Censys Search</option>
+            <option value="https://www.virustotal.com/gui/home/search">VirusTotal Search</option>
+            <option value="https://www.wappalyzer.com/lookup/">Wappalyzer Lookup</option>
+            <option value="https://www.exploit-db.com">Exploit-DB</option>
+            <option value="https://cve.mitre.org">MITRE CVE</option>
+          </optgroup>
+          <optgroup label="Web proxies & manual testing">
+            <option value="https://portswigger.net/burp">Burp Suite</option>
+            <option value="https://caido.io">Caido</option>
+            <option value="https://addons.mozilla.org/en-US/firefox/addon/pwnfox/">PwnFox</option>
+            <option value="https://www.wireshark.org/">Wireshark</option>
+          </optgroup>
+          <optgroup label="Recon & asset discovery">
+            <option value="https://github.com/projectdiscovery/subfinder">Subfinder</option>
+            <option value="https://github.com/owasp-amass/amass">Amass</option>
+            <option value="https://github.com/michenriksen/aquatone">Aquatone</option>
+            <option value="https://github.com/projectdiscovery/httpx">httpx</option>
+            <option value="https://github.com/blechschmidt/massdns">MassDNS</option>
+            <option value="https://github.com/lc/gau">gau</option>
+            <option value="https://github.com/tomnomnom/waybackurls">waybackurls</option>
+          </optgroup>
+          <optgroup label="Scanning, fuzzing & analysis">
+            <option value="https://github.com/projectdiscovery/nuclei">Nuclei</option>
+            <option value="https://portswigger.net/bappstore">Param Miner (Burp BApp)</option>
+            <option value="https://github.com/s0md3v/XSStrike">XSStrike</option>
+            <option value="https://github.com/tomnomnom/gf">gf</option>
+            <option value="https://portswigger.net/bappstore">Autorize (Burp BApp)</option>
+          </optgroup>
+          <optgroup label="Automation / agent tools">
+            <option value="https://github.com/Significant-Gravitas/AutoGPT">AutoGPT</option>
+            <option value="https://www.crewai.com">CrewAI</option>
+            <option value="https://github.com/GreyDGL/PentestGPT">PentestGPT</option>
+          </optgroup>
+          <optgroup label="Security frameworks">
+            <option value="https://github.com/1N3/Sn1per">Sn1per</option>
+            <option value="https://github.com/pry0cc/axiom">Axiom</option>
+            <option value="https://github.com/s0md3v/Arjun">Arjun</option>
+            <option value="https://projectdiscovery.io">ProjectDiscovery</option>
+            <option value="https://owasp.org/www-project-mobile-security-testing-guide/">Android Security (OWASP MSTG)</option>
+            <option value="https://ethereum.org/en/developers/docs/smart-contracts/security/">Web3 Security</option>
+          </optgroup>
+          <optgroup label="AI tools">
+            <option value="https://chat.openai.com">OpenAI / ChatGPT</option>
+            <option value="https://claude.ai">Anthropic / Claude</option>
+            <option value="https://gemini.google.com">Google Gemini</option>
+            <option value="https://www.perplexity.ai">Perplexity</option>
+            <option value="https://copilot.microsoft.com">Microsoft Copilot</option>
+            <option value="https://poe.com">Poe</option>
+            <option value="https://huggingface.co/models">Hugging Face model hub</option>
+          </optgroup>
+        </select>
+        <button type="button" id="loadPresetBtn">Load preset</button>
+      </div>
+      <div class="pipeline-controls">
+        <select id="templateSelect" aria-label="Task template">
+          <option value="">Choose automation template…</option>
+          <option value="recon">Recon pipeline</option>
+          <option value="triage">Triage pipeline</option>
+          <option value="report">Report pipeline</option>
+          <option value="webhunt">Web hunt pipeline</option>
+          <option value="mobile">Android security pipeline</option>
+          <option value="performance">Performance check pipeline</option>
+          <option value="manualtest">Manual web testing pipeline</option>
+        </select>
+        <button type="button" id="loadTemplateBtn">Load template</button>
+      </div>
+    </section>
+
+    <section class="tasks">
+      <h2>Task chain tracker</h2>
+      <p class="hint">Keep your bounty tasks in sequence so you do not forget steps.</p>
+      <div class="task-input-row">
+        <input id="taskInput" type="text" placeholder="Add task: recon, validate, report…" />
+        <button type="button" id="addTaskBtn">Add task</button>
+      </div>
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
+    </section>
+
     <p class="hint">Some sites block iframe embedding (X-Frame-Options/CSP). If blocked, open in a new tab.</p>
 
     <section class="viewer">
