@@ -4,22 +4,30 @@ Mobile Web Runner (single-page app) for opening websites in a mobile-friendly if
 
 ## Run locally
 
-Open `index.html` directly in a browser, or serve locally:
-
 ```bash
-python3 -m http.server 8080
+./start.sh 8080
 ```
 
-Then open `http://localhost:8080`.
+Open one of these:
+- `http://127.0.0.1:8080`
+- `http://localhost:8080`
 
-## Run now (verified)
 
+## If you see "127.0.0.1 refused to connect"
+
+1. Start server first:
 ```bash
-python3 -m http.server 8080
+./start.sh 8080
 ```
-
-Open: `http://127.0.0.1:8080`
-
+2. Check port is listening:
+```bash
+ss -ltnp | rg 8080
+```
+3. If busy port, run another:
+```bash
+./start.sh 9090
+```
+Then open `http://127.0.0.1:9090`.
 
 ## Link sharing (important)
 
