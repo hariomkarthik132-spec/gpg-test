@@ -12,6 +12,14 @@ python3 -m http.server 8080
 
 Then open `http://localhost:8080`.
 
+## Run now (verified)
+
+```bash
+python3 -m http.server 8080
+```
+
+Open: `http://127.0.0.1:8080`
+
 ## Features
 
 - URL input with auto `https://` normalization
