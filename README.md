@@ -20,6 +20,13 @@ python3 -m http.server 8080
 
 Open: `http://127.0.0.1:8080`
 
+
+## Link sharing (important)
+
+- I cannot send links to your Gmail directly from this environment.
+- After running locally, use this direct link in your browser: `http://127.0.0.1:8080`
+- If you deploy on GitHub Pages, your shareable link will be: `https://<your-username>.github.io/<repo-name>/`
+
 ## Features
 
 - URL input with auto `https://` normalization
