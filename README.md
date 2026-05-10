@@ -13,6 +13,22 @@ Open one of these:
 - `http://localhost:8080`
 
 
+## Notebook (Jupyter/Colab) me run kaise kare
+
+Agar terminal command work nahi kar rahi, notebook cell me ye chalao:
+
+```python
+!python3 notebook_server.py 8080
+```
+
+Phir browser me kholo:
+- `http://127.0.0.1:8080`
+
+Agar 8080 busy ho to:
+```python
+!python3 notebook_server.py 9090
+```
+
 ## If you see "127.0.0.1 refused to connect"
 
 1. Start server first:
