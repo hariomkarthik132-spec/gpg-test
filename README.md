@@ -45,6 +45,19 @@ ss -ltnp | rg 8080
 ```
 Then open `http://127.0.0.1:9090`.
 
+## GitHub par fix/publish kaise kare
+
+```bash
+git add .
+git commit -m "Fix app run + pipeline updates"
+git branch -M main
+git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPO>.git
+git push -u origin main
+```
+
+GitHub Pages enable karne ke baad link format:
+- `https://<YOUR_USERNAME>.github.io/<YOUR_REPO>/`
+
 ## Link sharing (important)
 
 - I cannot send links to your Gmail directly from this environment.
