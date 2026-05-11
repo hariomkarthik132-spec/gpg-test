@@ -31,17 +31,77 @@ h1 { margin-bottom: 4px; }
   margin: 12px 0;
 }
 
-input, button {
+.pipeline,
+.tasks {
+  margin: 8px 0 14px;
+  padding: 10px;
+  border: 1px solid #374151;
+  border-radius: 10px;
+  background: #0b1220;
+}
+
+.pipeline h2,
+.tasks h2 {
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+.pipeline-controls,
+.task-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.pipeline .pipeline-controls + .pipeline-controls {
+  margin-top: 8px;
+}
+
+.task-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.task-toggle,
+.task-remove {
+  font-size: 13px;
+}
+
+.task-toggle {
+  flex: 1;
+  text-align: left;
+}
+
+.task-list li.done .task-toggle {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+input, button, select {
   border-radius: 10px;
   border: 1px solid #374151;
   padding: 10px 12px;
   font-size: 14px;
 }
 
-input { background: #030712; color: var(--text); }
+input, select { background: #030712; color: var(--text); }
 button { background: #1f2937; color: var(--text); }
 button:hover { background: #374151; cursor: pointer; }
-button[type="submit"] { background: var(--accent); color: #052e16; font-weight: 600; }
+button[type="submit"], #loadPresetBtn, #addTaskBtn, #loadTemplateBtn {
+  background: var(--accent);
+  color: #052e16;
+  font-weight: 600;
+}
 
 .viewer {
   margin-top: 12px;
@@ -53,7 +113,7 @@ button[type="submit"] { background: var(--accent); color: #052e16; font-weight: 
 
 iframe {
   width: 100%;
-  height: calc(100vh - 220px);
+  height: calc(100vh - 490px);
   border: 0;
   background: white;
 }
@@ -67,5 +127,10 @@ iframe {
     grid-column: 1 / -1;
   }
 
-  iframe { height: calc(100vh - 300px); }
+  .pipeline-controls,
+  .task-input-row {
+    grid-template-columns: 1fr;
+  }
+
+  iframe { height: calc(100vh - 590px); }
 }
