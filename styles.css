@@ -26,7 +26,7 @@ h1 { margin-bottom: 4px; }
 
 .toolbar {
   display: grid;
-  grid-template-columns: 1fr repeat(4, auto);
+  grid-template-columns: 1fr repeat(5, auto);
   gap: 8px;
   margin: 12px 0;
 }
